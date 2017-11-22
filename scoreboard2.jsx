@@ -52,10 +52,8 @@ function Application(props) {
         </div>
     )
 }
-
-
 ReactDOM.render(
     // pass our title as an attribute, it will come trhough to the compnent as props
-    <Application title={"MLS SEMI FINAL SCOREBOARD"}/>,
+	<Application title={"MLS SEMI FINAL SCOREBOARD"}/>,
     document.getElementById("root")
 )

@@ -17,15 +17,11 @@ function Application(){
         </div>
     )
 }
-
-
 function Student(props){
     // this is a component, which returns a single DOM element
     return (
         <li>{props.name} is in seat {props.seat} </li>
     )
-
-
 }
 ReactDOM.render(
     < Application/>,
