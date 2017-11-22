@@ -1,0 +1,20 @@
+{
+  "name": "react101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.6.5",
+    "create-react-app": "^1.4.3",
+    "eslint": "^4.11.0",
+    "eslint-plugin-react": "^7.5.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "serve-static": "^1.13.1"
+  }
+}
