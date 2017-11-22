@@ -22,24 +22,56 @@ class CoinFlip extends React.Component{
 		// this is a child class of the React.Component class, we must called super to use it
 		super();
 		this.test = "this is a test class property";
+		// nothing about title, react doesn't care about it at all
 		this.title = props.title;
+		// satate is special, react cares alot
+		this.coin =[
+			'http://www.marshu.com/articles/images-website/articles/presidents-on-coins/half-dollar-coin-tail.jpg',
+			'http://www.marshu.com/articles/images-website/articles/presidents-on-coins/quarter-coin-head.jpg'
+		]
+		this.state = {
+			image: this.coin[0]
+		}
+		this.flipCoin = this.flipCoin.bind(this);
+	}
+
+	flipCoin(){
+		console.log("flip Coin ran");
+		var coinSide = Math.round(Math.random());
+		// we are going to change this.state
+		// Listen. Really, Listen
+		this.setState({
+			image: this.coin[coinSide]
+		})
 	}
 	// This one function we must have in a component is .... 
 	render(){
 		// render must  return a single dom element
 		return (
-			<h1>{this.title}</h1>
+			<div className="coin-flip">
+				<h1>{this.title}</h1>
+				<div>
+					<button onClick={this.flipCoin}>Click to Flip the coin</button>
+					<img src={this.state.image} alt="" srcset=""/>
+				</div>
+			</div>
 		)
 	}
 }
 
 
-
+function Index(){
+	return (
+		<div>
+			<CoinFlip title="flip the coin"/>
+		</div>
+	)
+}
 
 
 
 
 ReactDOM.render(
-	<CoinFlip title="flip the coin"/>,
+	<Index />,
 	document.getElementById("root")
 )
